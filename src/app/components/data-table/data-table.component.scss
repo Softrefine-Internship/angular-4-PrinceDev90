@@ -1,0 +1,29 @@
+table {
+  margin: 0px auto;
+  width: 90%;
+  min-width: 800px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.space_th {
+  border: none;
+  background-color: #fff;
+}
+
+#search__data,
+#sort_column,
+#row__count {
+  padding: 5px;
+  width: 100%;
+}

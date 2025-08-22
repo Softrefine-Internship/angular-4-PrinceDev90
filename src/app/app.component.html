@@ -1,0 +1,138 @@
+<h1 class="text-center">Data Table</h1>
+<hr />
+
+<div class="table-responsive">
+  <!-- <table>
+    <thead class="thead">
+      <tr>
+        <th colspan="1">
+          <select name="row__count" id="row__count">
+            <option value="" selected disabled>-- Row count --</option>
+            <option value="">5</option>
+            <option value="">10</option>
+            <option value="">25</option>
+            <option value="">50</option>
+            <option value="">75</option>
+            <option value="">100</option>
+          </select>
+        </th>
+
+        <th colspan="4" class="space_th"></th>
+
+        <th colspan="1">
+          <select name="sort_column" id="sort_column">
+            <option value="" selected disabled>
+              -- select column for sort --
+            </option>
+            <option value="">user id</option>
+            <option value="">first name</option>
+            <option value="">last name</option>
+            <option value="">age</option>
+            <option value="">gender</option>
+            <option value="">phone</option>
+            <option value="">role</option>
+            <option value="">username</option>
+          </select>
+        </th>
+
+        <th colspan="2">
+          <input
+            type="search"
+            name="search__data"
+            placeholder="Search user record."
+            id="search__data"
+          />
+        </th>
+      </tr>
+      <tr>
+        <th>User ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Phone</th>
+        <th>Role</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>First name</td>
+        <td>Last name</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Phone</td>
+        <td>Role</td>
+        <td>Username</td>
+      </tr>
+
+      <tr>
+        <td>User ID</td>
+        <td>First name</td>
+        <td>Last name</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Phone</td>
+        <td>Role</td>
+        <td>Username</td>
+      </tr>
+      <tr>
+        <td>User ID</td>
+        <td>First name</td>
+        <td>Last name</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Phone</td>
+        <td>Role</td>
+        <td>Username</td>
+      </tr>
+      <tr>
+        <td>User ID</td>
+        <td>First name</td>
+        <td>Last name</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Phone</td>
+        <td>Role</td>
+        <td>Username</td>
+      </tr>
+      <tr>
+        <td>User ID</td>
+        <td>First name</td>
+        <td>Last name</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Phone</td>
+        <td>Role</td>
+        <td>Username</td>
+      </tr>
+
+      <tr>
+        <td>User ID</td>
+        <td>First name</td>
+        <td>Last name</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Phone</td>
+        <td>Role</td>
+        <td>Username</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="7">Total User:</td>
+        <td>3</td>
+      </tr>
+    </tfoot>
+  </table> -->
+  <app-data-table />
+</div>
+
+<!-- <p *ngIf="isLoading">Loadding..</p> -->
+<app-loader *ngIf="isLoading"></app-loader>
+
+<button (click)="onFetchData()">Fetch Data</button>
+<app-loader></app-loader>
