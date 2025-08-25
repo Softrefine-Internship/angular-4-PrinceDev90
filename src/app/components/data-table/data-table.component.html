@@ -93,7 +93,12 @@
     <app-loader *ngIf="isLoadingUser()" />
 
     <ng-container *ngIf="filteredUsers().length > 0; else noData">
-      <tr *ngFor="let user of filteredUsers(); index as defaultIndex">
+      <tr
+        *ngFor="let user of filteredUsers(); index as defaultIndex"
+        [ngStyle]="{
+          'background-color': defaultIndex % 2 === 0 ? 'white' : '#f2f2f273'
+        }"
+      >
         <!-- <td>{{ defaultIndex }}</td> -->
         <td>{{ user.id }}</td>
         <td>{{ user.firstName }}</td>
