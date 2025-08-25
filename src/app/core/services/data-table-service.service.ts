@@ -6,10 +6,9 @@ import { User } from 'src/app/interfaces/user.model';
 })
 export class DataTableServiceService {
   constructor() {}
-  private users = signal<User[]>([]);
+  // users = signal<User[]>([]);
+  // allUsers = this.users.asReadonly();
   isLoading = signal<boolean>(true);
-
-  allUsers = this.users.asReadonly();
 
   async fetchUsers() {
     try {
@@ -17,20 +16,18 @@ export class DataTableServiceService {
       const data = await response.json();
       this.isLoading.set(false);
 
-      this.users.set(
-        data.users.map((user: User) => {
-          return {
-            id: user.id,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            age: user.age,
-            gender: user.gender,
-            phone: user.phone,
-            role: user.role,
-            username: user.username,
-          };
-        })
-      );
+      return data.users.map((user: User) => {
+        return {
+          id: user.id,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          age: user.age,
+          gender: user.gender,
+          phone: user.phone,
+          role: user.role,
+          username: user.username,
+        };
+      });
     } catch (err) {
       console.error(err);
     }

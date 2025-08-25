@@ -8,13 +8,8 @@ import { DataTableServiceService } from './core/services/data-table-service.serv
 })
 export class AppComponent implements OnInit {
   userService = inject(DataTableServiceService);
-  isLoading: boolean = true;
 
-  async ngOnInit(): Promise<void> {
+  async ngOnInit() {
     await this.userService.fetchUsers();
-    this.isLoading = false;
-    console.log(this.userService.allUsers());
   }
-
-  async onFetchData() {}
 }
